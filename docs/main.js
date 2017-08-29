@@ -8,6 +8,10 @@ window.onload = function () {
   ctx.lineJoin = 'round';
 };
 
+function changeFont(){
+  ctx.font = document.getElementById("font").value()
+}
+
 function saveImage() {
   var a = document.createElement("a");
   a.href = canvas.toDataURL("image/png");
@@ -20,7 +24,7 @@ function saveImage() {
 function redraw() {
   ctx.setTransform(1,0,0,1,0,0);
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.setTransform(1,0,-0.4,1,0,0);
+  ctx.setTransform(1,0,-0.2,1,0,0);
   var posx = 70;
   var posy = 100;
   var text = textbox.value;
